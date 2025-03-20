@@ -1,0 +1,14 @@
+[Unit]
+Description=Timer for random wallpaper changer
+PartOf=graphical-session.target
+Requires=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Timer]
+OnActiveSec=5min
+OnUnitActiveSec=5min
+Persistent=true
+
+[Install]
+WantedBy=graphical-session.target
